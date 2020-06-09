@@ -264,9 +264,9 @@ int shellSort(int *a)
 		{
 			for(j = i + h; j < MAX_ARRAY_SIZE; j += h)			// 삽입정렬 적용
 			{
-				v = a[j];
-				k = j;
-				while (k > h-1 && a[k-h] > v)
+				v = a[j];					// Assign temporary variable 
+				k = j;						// temporary variable j = i
+				while (k > h-1 && a[k-h] > v)			// find seat for next index
 				{
 					a[k] = a[k-h];
 					k -= h;
